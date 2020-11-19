@@ -21,7 +21,8 @@ def get_marks():
     print ("Your current percentage going into exam is ", current_percentage*100, "%")
     ratio_to_scale = (100 - exam_weight)/weight_taken
     real_weight_lost = ratio_to_scale*weight_lost
-    print ("To finish the course with a 12 you would need",  (exam_weight - ((100 - minimum_12) - real_weight_lost))/exam_weight, "% on your final exam")
-    print ("To finish the course with a 11 you would need",  (exam_weight - ((100 - minimum_11) - real_weight_lost))/exam_weight, "% on your final exam")        
+
+    for i in range (0, len(percent_to_get)):
+        print ("To finish the course with a", 12-i , "you would need",  ((exam_weight - ((100 - percent_to_get[i]) - real_weight_lost))/exam_weight)*100, "% on your final exam")
      
 get_marks()
