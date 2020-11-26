@@ -21,6 +21,10 @@ def get_marks():
     marks_earned = weight_taken - weight_lost
     print ("Your current percentage going into exam is ", current_percentage*100, "%")
     print ("marks you have earned so far ", marks_earned)
+    if (marks_earned > 50):
+        print("CONGRATS BROTHA YOU HAVE ALREADY PASSED THE COURSE")
+    else:
+        print("Sorry buad you need some more marks on exam to pass. guess you gotta show up")
     ratio_to_scale = (100 - exam_weight)/weight_taken
     real_weight_lost = ratio_to_scale*weight_lost
 
