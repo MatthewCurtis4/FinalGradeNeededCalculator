@@ -26,9 +26,10 @@ def get_marks():
     else:
         print("Sorry buad you need some more marks on exam to pass. guess you gotta show up")
     ratio_to_scale = (100 - exam_weight)/weight_taken
+
     real_weight_lost = ratio_to_scale*weight_lost
 
     for i in range (0, len(percent_to_get)):
-        print ("To finish the course with a", 12-i , "you would need",  ((exam_weight - ((100 - percent_to_get[i]) - real_weight_lost))/exam_weight)*100, "% on your final exam")
+        print('To finish the course with a' + 12-i + 'you would need' +  ((exam_weight - ((100 - percent_to_get[i]) - real_weight_lost))/exam_weight)*100 + '% on your final exam')
      
 get_marks()
