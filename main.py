@@ -19,8 +19,8 @@ def get_marks():
         print ("To complete this calculation, we will assume you score the same on all remaining grades as you have so far this semester")
     current_percentage = (weight_taken - weight_lost)/weight_taken
     marks_earned = weight_taken - weight_lost
-    print ("Your current percentage going into exam is ", current_percentage*100, "%")
-    print ("marks you have earned so far ", marks_earned)
+    print ("Your current percentage going into exam is " + str(current_percentage*100) + "%")
+    print ("marks you have earned so far " + str(marks_earned))
     if (marks_earned > 50):
         print("CONGRATS BROTHA YOU HAVE ALREADY PASSED THE COURSE")
     else:
@@ -30,6 +30,6 @@ def get_marks():
     real_weight_lost = ratio_to_scale*weight_lost
 
     for i in range (0, len(percent_to_get)):
-        print('To finish the course with a' + 12-i + 'you would need' +  ((exam_weight - ((100 - percent_to_get[i]) - real_weight_lost))/exam_weight)*100 + '% on your final exam')
+        print('To finish the course with a ' + str(12-i) + ' you would need a ' +  str(((exam_weight - ((100 - percent_to_get[i]) - real_weight_lost))/exam_weight)*100) + '% on your final exam.')
      
 get_marks()
